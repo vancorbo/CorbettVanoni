@@ -1,0 +1,644 @@
+/* =========================================================
+   CORBETT VANONI PORTFOLIO
+   Main stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   1. FONTS
+   ========================================================= */
+
+@font-face {
+  font-display: swap;
+  font-family: 'Chelsea Market';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/chelsea-market-v14-latin-regular.woff2') format('woff2');
+}
+
+
+/* =========================================================
+   2. GLOBAL VARIABLES
+   ========================================================= */
+
+:root {
+  --bg: #f4f1eb;
+  --text: #171717;
+  --muted: #6d6a64;
+  --line: #d5d0c7;
+  --accent: #e3256b;
+  --max: 1500px;
+}
+
+
+/* =========================================================
+   3. GLOBAL / RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.45;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Chelsea Market', sans-serif;
+}
+
+
+/* =========================================================
+   4. HEADER
+   ========================================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  padding: 22px 4vw;
+
+  background: rgba(244, 241, 235, .94);
+  backdrop-filter: blur(8px);
+
+  border-bottom: 1px solid var(--line);
+}
+
+
+/* Site logo */
+
+.site-title {
+  display: block;
+  line-height: 0;
+}
+
+.site-title img {
+  display: block;
+  width: 250px;
+  height: auto;
+}
+
+
+/* Header navigation */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.site-nav a {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.site-nav a:hover,
+.text-link:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+
+/* Instagram */
+
+.instagram-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagram-link svg {
+  width: 19px;
+  height: 19px;
+
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: all .2s ease;
+}
+
+.instagram-link:hover svg {
+  stroke: var(--accent);
+  transform: scale(1.1);
+}
+
+
+/* Mobile menu button */
+
+.menu-toggle {
+  display: none;
+}
+
+
+/* =========================================================
+   5. HERO
+   ========================================================= */
+
+.hero {
+  min-height: auto;
+
+  display: grid;
+  align-items: start;
+
+  padding: 3vw 4vw 2vw;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-image {
+  display: block;
+
+  max-width: min(1400px, 85vw);
+  max-height: 48vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  object-position: left bottom;
+
+  margin: 8px 0 28px;
+}
+
+.hero h1 {
+  margin: 8px 0 20px;
+
+  font-size: clamp(76px, 13vw, 190px);
+  line-height: .78;
+  letter-spacing: -.07em;
+  font-weight: 400;
+}
+
+.eyebrow {
+  margin: 0;
+
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-weight: 400;
+}
+
+.intro {
+  max-width: 440px;
+  margin: 0;
+
+  font-size: clamp(18px, 2vw, 26px);
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   6. GALLERY SECTIONS
+   ========================================================= */
+
+.gallery-section {
+  max-width: var(--max);
+
+  margin: 0 auto;
+
+  padding: 110px 4vw;
+}
+
+
+/* Gallery section heading */
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+  align-items: start;
+
+  margin-bottom: 55px;
+}
+
+.section-heading h2 {
+  margin: 8px 0 0;
+
+  font-size: clamp(48px, 7vw, 70px);
+  line-height: .85;
+  letter-spacing: -.055em;
+
+  color: var(--accent);
+}
+
+.section-heading > p {
+  max-width: 410px;
+  margin: 0 0 5px;
+
+  color: var(--muted);
+}
+
+
+/* Gallery grid */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  gap: 18px;
+}
+
+
+/* Artwork cards */
+
+.art-card {
+  grid-column: span 4;
+  cursor: pointer;
+}
+
+.art-card:nth-child(5n + 1) {
+  grid-column: span 6;
+}
+
+.art-card:nth-child(5n + 4) {
+  grid-column: span 3;
+}
+
+
+/* Artwork image */
+
+.art-image {
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #dedad2;
+}
+
+.art-card.wide .art-image {
+  aspect-ratio: 16 / 10;
+}
+
+.art-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .5s cubic-bezier(.2, .7, .2, 1);
+}
+
+.art-card:hover img {
+  transform: scale(1.025);
+}
+
+
+/* Artwork information */
+
+.art-info {
+  padding: 12px 2px 0;
+}
+
+.art-title {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.art-details {
+  margin: 2px 0 0;
+
+  color: var(--muted);
+  font-size: 12px;
+}
+
+
+/* Placeholder artwork */
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 30px;
+
+  text-align: center;
+
+  color: var(--muted);
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 49%,
+      rgba(0, 0, 0, .07) 50%,
+      transparent 51%
+    ),
+    #dedad2;
+
+  background-size: 24px 24px;
+}
+
+
+/* =========================================================
+   7. ABOUT / SHOP / CONTACT SECTIONS
+   ========================================================= */
+
+.text-section {
+  max-width: var(--max);
+
+  margin: 0 auto;
+
+  padding: 130px 4vw;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  gap: 60px;
+
+  border-top: 1px solid var(--line);
+}
+
+.text-section h2 {
+  margin: 0 0 35px;
+
+  font-size: clamp(45px, 6vw, 70px);
+  line-height: .9;
+  letter-spacing: -.055em;
+
+  color: var(--accent);
+}
+
+.text-section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 60px 4vw;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  border-top: 1px solid var(--line);
+}
+
+.text-link {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  font-weight: 400;
+
+  border-bottom: 1px solid var(--text);
+
+  padding-bottom: 3px;
+}
+
+
+/* =========================================================
+   8. FOOTER
+   ========================================================= */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 28px 4vw;
+
+  border-top: 1px solid var(--line);
+
+  color: var(--muted);
+
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+
+/* =========================================================
+   9. LIGHTBOX
+   ========================================================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5vw;
+
+  background: rgba(20, 20, 20, .96);
+
+  color: white;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 1200px;
+  max-height: 90vh;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  gap: 30px;
+  align-items: end;
+}
+
+.lightbox img {
+  max-width: min(75vw, 1000px);
+  max-height: 82vh;
+
+  object-fit: contain;
+}
+
+.lightbox-info {
+  width: 190px;
+}
+
+.lightbox-info h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+}
+
+.lightbox-info p {
+  margin: 0;
+
+  color: #bbb;
+  font-size: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+
+  border: 0;
+  background: none;
+
+  color: white;
+
+  font-size: 42px;
+  font-weight: 200;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   10. MOBILE — 800px AND BELOW
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  /* Header */
+
+  .site-header {
+    padding: 18px 5vw;
+  }
+
+  .menu-toggle {
+    display: block;
+
+    border: 0;
+    background: none;
+
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 11px;
+
+    cursor: pointer;
+  }
+
+  .site-nav {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    padding: 20px 5vw 25px;
+
+    flex-direction: column;
+
+    background: var(--bg);
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    min-height: 70vh;
+    padding: 15vw 5vw;
+  }
+
+
+  /* Galleries */
+
+  .gallery-section {
+    padding: 75px 5vw;
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+  .art-card,
+  .art-card:nth-child(5n + 1),
+  .art-card:nth-child(5n + 4) {
+    grid-column: span 1;
+  }
+
+  .art-card:nth-child(3n + 1) {
+    grid-column: span 2;
+  }
+
+
+  /* About / Shop / Contact */
+
+  .text-section {
+    padding: 80px 5vw;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .text-section.compact {
+    padding: 65px 5vw;
+  }
+
+
+  /* Footer */
+
+  .site-footer {
+    padding: 22px 5vw;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+
+  /* Lightbox */
+
+  .lightbox-content {
+    display: block;
+    max-width: 100%;
+  }
+
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 75vh;
+  }
+
+  .lightbox-info {
+    width: auto;
+    padding-top: 12px;
+  }
+}

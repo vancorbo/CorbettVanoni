@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Corbett Vanoni — artist, cartoonist and illustrator based in Minneapolis, Minnesota.">
+<title>Corbett Vanoni — Artist, Cartoonist & Illustrator</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+ <a class="site-title" href="index.html">
+  <img src="images/site-logo.jpg" alt="Corbett Vanoni">
+</a>
+  <button class="menu-toggle" aria-expanded="false">Menu</button>
+ <div class="header-right">
+
+  <nav class="site-nav">
+    <a href="#illustration">Illustration</a>
+    <a href="#fine-art">Fine Art</a>
+    <a href="#cartoons">Cartoons</a>
+    <a href="#photo-art">Photo Art</a>
+    <a href="#about">About</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a class="instagram-link"
+     href="https://www.instagram.com/corbettvanoniart/"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Instagram">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+      <circle cx="12" cy="12" r="4"></circle>
+      <circle cx="17.5" cy="6.5" r="1"></circle>
+    </svg>
+  </a>
+
+</div>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <img class="hero-image" src="images/hero.jpg" alt="Corbett Vanoni">
+  </div>
+</section>
+
+<section id="illustration" class="gallery-section">
+  <div class="section-heading"><div><h2>Illustration</h2></div>
+  <p>Selected commercial, editorial and personal illustration.</p></div>
+  <div class="gallery" id="illustration-gallery"></div>
+</section>
+
+<section id="fine-art" class="gallery-section">
+  <div class="section-heading"><div><h2>Fine Art</h2></div>
+  <p>Selected paintings and drawings.</p></div>
+  <div class="gallery" id="fine-art-gallery"></div>
+</section>
+
+<section id="cartoons" class="gallery-section">
+  <div class="section-heading"><div><h2>Cartoons</h2></div>
+  <p>Single-panel cartoons and comic work.</p></div>
+  <div class="gallery" id="cartoons-gallery"></div>
+</section>
+
+<section id="photo-art" class="gallery-section">
+  <div class="section-heading"><div><h2>Photo Art</h2></div>
+  <p>Selected photographic and photo-based artwork.</p></div>
+  <div class="gallery" id="photo-art-gallery"></div>
+</section>
+
+<section id="about" class="text-section">
+  <p class="eyebrow">About</p><div>
+  <h2>Artist, cartoonist<br>& illustrator.</h2>
+  <p>Corbett Vanoni is an illustrator, cartoonist, and fine artist based in Minneapolis, Minnesota. Born and raised in Southern California, he spent many years working as an art director and prepress technician while also freelancing in animation and illustration. In 2008, Corbett moved from Los Angeles to Minneapolis, where he now works full time from his studio in the historic California Building, a former grain mill turned art space. (Serendipity?) Since 2013, Corbett has been the house animator and illustrator for the educational music group The Learning Station. From 2014 until its closure in 2025, he also created many of the illustrations and images used by Minneapolis restaurant Market Bar-B-Que. Looking ahead, Corbett is focusing increasingly on his work as a panel cartoonist and fine artist.</p>
+  <p>More about Corbett, his practice and current projects will go here.</p>
+  </div>
+</section>
+
+<section id="shop" class="text-section compact">
+  <p class="eyebrow">Shop</p><div><h2>Browse & buy.</h2>
+  <p>Original artwork, prints and other work available for purchase.</p>
+  <a class="text-link" href="#" onclick="return false;">Visit the shop →</a></div>
+</section>
+
+<section id="contact" class="text-section compact">
+  <p class="eyebrow">Contact</p><div><h2>Let's talk.</h2>
+  <p>For illustration, cartooning, exhibitions, commissions and other inquiries.</p>
+  <a class="text-link" href="mailto:info@CorbettVanoni.com">info@CorbettVanoni.com →</a></div>
+</section>
+</main>
+
+<footer class="site-footer"><span>All Artwork © 2026 Corbett Vanoni unless otherwise noted</span><span><a href="images/SirReginaldMcMillanGoodthorpeIII.jpg" target="_blank">🐱</a></span></footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <div class="lightbox-content"><img id="lightbox-image" src="" alt="">
+    <div class="lightbox-info"><h3 id="lightbox-title"></h3><p id="lightbox-details"></p></div>
+  </div>
+</div>
+<script src="js/artwork.js"></script><script src="js/script.js"></script>
+</body></html>
